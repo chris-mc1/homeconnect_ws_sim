@@ -1,0 +1,2 @@
+graft src/homeconnect_ws_sim/frontend/dist*
+prune src/homeconnect_ws_sim/frontend/node_modules*
