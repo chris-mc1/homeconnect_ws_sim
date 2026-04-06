@@ -9,11 +9,14 @@ authors = [{ name = "chris-mc1" }]
 description = "Homeconnect Websocket Simulator"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["aiohttp>=3.11.13", "homeconnect_websocket==1.5.2"]
+dependencies = ["aiohttp>=3.11.13", "homeconnect_websocket==1.5.3"]
 
 [project.urls]
 Homepage = "https://github.com/chris-mc1/homeconnect_ws_sim"
 Issues = "https://github.com/chris-mc1/homeconnect_ws_sim/issues"
+
+[project.scripts]
+homeconnect_ws_sim = "homeconnect_ws_sim.__main__:main"
 
 [dependency-groups]
 dev = ["colorlog", "ruff>=0.9"]
