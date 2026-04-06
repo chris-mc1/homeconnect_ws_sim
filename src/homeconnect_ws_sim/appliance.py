@@ -7,8 +7,7 @@ from typing import TYPE_CHECKING
 
 from aiohttp import web
 
-from src.homeconnect_ws_sim.const import DEFAULT_INFO, DEFAULT_SERVICE_VERSIONS
-
+from .const import DEFAULT_INFO, DEFAULT_SERVICE_VERSIONS
 from .entities import (
     ActiveProgram,
     Command,
@@ -80,7 +79,7 @@ class SimAppliance:
 
         """
         self.psk64 = psk64
-        self.service_versions = services if services else DEFAULT_SERVICE_VERSIONS
+        self.service_versions = services or DEFAULT_SERVICE_VERSIONS
         if logger is None:
             self._logger = logging.getLogger(__name__)
         else:

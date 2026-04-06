@@ -94,6 +94,9 @@ class SimSession:
             elif message.resource == "/ro/allMandatoryValues":
                 resp = message.responde(data=self._appliance.get_all_values())
                 await self.send(resp)
+            elif message.resource == "/ci/authentication":
+                resp = message.responde(data={"response": random.randrange(1000000000, 9999999999)})  # noqa: S311
+                await self.send(resp)
             else:
                 resp = message.responde()
                 resp.code = 404
