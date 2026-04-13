@@ -19,7 +19,7 @@ Issues = "https://github.com/chris-mc1/homeconnect_ws_sim/issues"
 homeconnect_ws_sim = "homeconnect_ws_sim.__main__:main"
 
 [dependency-groups]
-dev = ["colorlog", "ruff>=0.9"]
+dev = ["colorlog", "ruff>=0.15.10"]
 test = [
     "pytest>=8.3.0",
     "pytest-asyncio>=0.24.0",
